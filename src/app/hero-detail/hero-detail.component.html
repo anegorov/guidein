@@ -1,0 +1,20 @@
+<div class="page" *ngIf="hero">
+  <h2>{{ hero.name | uppercase }}</h2>
+  <div class="boxImg">
+    <div class="active">
+        <img src="assets\catalog\{{hero.name}}\{{imgActive}}">
+    </div>
+    <div *ngFor="let val of testOutputVal" class="imgList" (click)="setActive(val)">
+        <img src="assets\catalog\{{hero.name}}\{{val}}">
+    </div>
+  </div>
+
+  <div class="boxInfo">
+    <div id="info_detail">
+	   {{hero.description}}
+    </div>
+  </div>
+</div>
+<!--div><span>id: </span>{{hero.id}}</div-->
+  <!--label>name:<input [(ngModel)]="hero.name" placeholder="name"/></label-->
+  <!--button (click)="goBack()">go back</button><button (click)="save()">save</button-->
